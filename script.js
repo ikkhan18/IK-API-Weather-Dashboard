@@ -22,7 +22,7 @@ function returnCurrentWeather(cityName) {
         let weatherIcon = `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`;
 
         currWeatherDiv.html(`
-        <h2>${response.name}, ${response.sys.country} (${currTime.getMonth()+1}/${currTime.getDate()}/${currTime.getFullYear()})<img src=${weatherIcon} height="30px"></h2>
+        <h2>${response.name}, ${response.sys.country} (${currTime.getMonth()+1}/${currTime.getDate()}/${currTime.getFullYear()})<img src=${weatherIcon} height="80px"></h2>
         <p>Temperature: ${response.main.temp} &#176;C</p>
         <p>Humidity: ${response.main.humidity}%</p>
         <p>Wind Speed: ${response.wind.speed} m/s</p>`,
@@ -111,6 +111,11 @@ function writeSearchHistory(array) {
         createHistoryButton(array[i]);
     })
 }
+
+
+// Get a deafult weather search
+returnCurrentWeather("Birmingham, UK");
+returnWeatherForecast("Birmingham, UK");
 
 $("#submitCity").click(function() {
     event.preventDefault();
