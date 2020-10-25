@@ -11,7 +11,7 @@ Production page: https://ikkhan18.github.io/IK-API-Weather-Dashboard/
 
 ## Approach
 I started by dividing the main task into smaller tasks, as outlined below:
-1. Designe the page layout 
+1. Design the page layout 
 2. Get the user input city
 3. Send the request to the Openweather server and retrieve the current weather and forecast
 4. Show the information on screen
