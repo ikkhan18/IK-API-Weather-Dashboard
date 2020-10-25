@@ -1,16 +1,17 @@
 const apiKey = "0765d126b0f6a7eb158764d733ae5823";
 var currWeatherDiv = $("#currentWeather");
 var forecastDiv = $("#weatherForecast");
-var citiesArray;
+var citiesArray=[];
+
 
 if (localStorage.getItem("localWeatherSearches")) {
-    citiesArray = JSON.stringify(localStorage.getItem("localWeatherSearches"));
+    citiesArray = JSON.parse(localStorage.getItem("localWeatherSearches"));
     writeSearchHistory(citiesArray);
 } else {
     citiesArray = [];
 };
 
-// Function will retrun weather information for entered city
+// Function will retrun weather information for input city
 
 function returnCurrentWeather(cityName) {
     let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${apiKey}`;
@@ -28,6 +29,8 @@ function returnCurrentWeather(cityName) {
         createHistoryButton(response.name);
     })
 };
+
+// Function will return 5-day forecast that gives information with icon, the date, weather conditions, the temperature, and the humidity
 
 function returnWeatherForecast(cityName) {
     let queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=${apiKey}`;
