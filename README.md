@@ -3,10 +3,10 @@ A weather dashboard which displays current weather and forecast for a searched c
 
 Production page: https://ikkhan18.github.io/IK-API-Weather-Dashboard/
 
-![weatherPage](https://Assets/mainpage.PNG)
+![weatherPage](Assets/mainpage.PNG)
 
 
-![weatherPage](https://Assets/weatherpage.PNG)
+![weatherPage](Assets/weatherpage.PNG)
 
 
 ## Approach
