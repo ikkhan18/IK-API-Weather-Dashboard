@@ -1,8 +1,7 @@
 const apiKey = "0765d126b0f6a7eb158764d733ae5823";
 var currWeatherDiv = $("#currentWeather");
 var forecastDiv = $("#weatherForecast");
-var citiesArray=[];
-localStorage.clear();
+var citiesArray;
 
 
 if (localStorage.getItem("localWeatherSearches")) {
